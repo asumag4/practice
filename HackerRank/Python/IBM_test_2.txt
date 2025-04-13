@@ -1,0 +1,43 @@
+def findNumOfPairs(a, b):
+    # Write your code here
+    
+    # Find all the unique pairs possibly formed from two arrays 
+    
+    # Start with a holder variable 
+    possibilities = 0
+
+    for x in range(len(a)):
+    
+    # Init a holder dict to keep track of the indices you use
+        possibl_array = {
+            "a" : [],
+            "b" : []
+        } 
+
+    # Go through all of a
+        for i in range(x,len(a)):
+    # Go through all of b 
+            for j in range(len(b)):
+    # For each iteration, see if you already have that possiblities of indices
+    # If they don't, "reserve" that pair of indices from a and b 
+                if (a[i] != b[j]):
+                    if (a[i] not in possibl_array["a"]) and (b[j] not in possibl_array["b"]):
+                        possibl_array["a"].append(i)
+                        possibl_array["b"].append(j)
+    # If they do, go to the next value of b 
+                else: 
+                    continue
+        
+        print(possibl_array)
+
+    # Continue to the next value of b
+
+    # After going through all the possibiblities of this round of a 
+        if (len(possibl_array["a"]) > possibilities):
+            possibilities = len(possibl_array)
+    
+    return possibilities
+
+
+
+print(findNumOfPairs([1,2,3],[1,2,1]))

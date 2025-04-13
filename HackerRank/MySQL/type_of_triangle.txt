@@ -1,0 +1,33 @@
+SELECT 
+	CASE 
+		WHEN ((A+B)<=C OR (B+C)<=A OR (C+A)<=B) THEN 'Not A Triangle' 
+		WHEN (A=B AND B=C) THEN 'Equilateral' 
+		WHEN (A=B OR B=C OR A=C) THEN 'Isosceles' 
+		ELSE 'Scalene' 
+	END 
+FROM TRIANGLES
+
+We cannot do the following solution: 
+
+/*
+Enter your query here.
+*/
+
+SELECT 
+    CASE 
+        WHEN (A=B AND B=C) THEN 'Equilateral'
+        WHEN ((A=B)OR(A=C)OR(B=C)) THEN 'Isosceles'
+        WHEN ((A!=B) AND (B!=C)) THEN 'Scalene'
+        ELSE 'Not A Triangle'
+    END 
+FROM TRIANGLES
+        
+
+Because: 
+1. Not A Triangle: First, check if the lengths cannot form a triangle using the condition A + B <= C OR B + C <= A OR C + A <= B. If true, it returns 'Not A Triangle'.
+
+2. Equilateral: Next, check for an equilateral triangle where all sides are equal A = B AND B = C.
+
+3. Isosceles: Then check for an isosceles triangle where any two sides are equal A = B OR A = C OR B = C.
+
+4. Scalene: Finally, if none of the above conditions are met, it returns 'Scalene' as the default.

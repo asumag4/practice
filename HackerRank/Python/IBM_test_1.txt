@@ -1,0 +1,26 @@
+def hasVowels(strArr, query):
+    VOWELS = {'a', 'e', 'i', 'o', 'u'}
+    outputLst = []
+    
+    # Preprocess the array to store whether each string starts and ends with a vowel
+    vowel_status = []
+    for s in strArr:
+        starts_with_vowel = s[0] in VOWELS if s else False
+        ends_with_vowel = s[-1] in VOWELS if s else False
+        vowel_status.append(starts_with_vowel and ends_with_vowel)
+    
+    for q in query:
+        start, end = map(int, q.split('-'))
+        # Convert to 0-based indexing
+        start_idx = start - 1
+        end_idx = end - 1
+        # Count the number of strings in the range that start and end with a vowel
+        count = sum(1 for i in range(start_idx, end_idx + 1) if vowel_status[i])
+        outputLst.append(count)
+    
+    return outputLst
+
+# Example usage:
+strArr = ['aab', 'a', 'bcd', 'awe', 'bbbbbu']
+query = ['2-3', '4-5']
+print(hasVowels(strArr, query))  # Output: [1, 1]
