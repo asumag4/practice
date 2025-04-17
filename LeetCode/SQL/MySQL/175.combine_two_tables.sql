@@ -1,6 +1,5 @@
-My Solution: 
+-- My Solution: 
 
-# Write your MySQL query statement below
 SELECT 
     Person.firstName,
     Person.lastName,
@@ -12,7 +11,7 @@ SELECT
 
 Top Solution: 
 
-# Write your MySQL query statement below
+-- BEST SOLUTION 
 
 select firstname, lastname, city, state
 from Person P
