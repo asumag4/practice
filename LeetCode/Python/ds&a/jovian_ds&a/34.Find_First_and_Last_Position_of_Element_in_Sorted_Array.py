@@ -1,45 +1,39 @@
+
 class Solution:
+    
     def searchRange(self, nums: list[int], target: int) -> list[int]:
         
-        # Binary search for the first occurance of 8 
-        lo = 0 
-        hi = len(nums) - 1 
+        def binarySearchLimits(nums, target, lower): # We'll toggle between the lower and upper bounds 
 
-        for _ in range(len(nums)):
+            lo = 0
+            hi = len(nums) - 1
 
-            mid = (hi + lo) // 2
+            while lo <= hi: 
 
-            # print(f"lo: {nums[lo]}")
-            # print(f"hi: {nums[hi]}")
-            # print(f"mid: {nums[mid]}")
-            # print(f"range: {nums[lo:hi+1]}")
-
-            if nums[mid] == target: 
-
-                # We then need to implement how we can find the first and second instance of our target! 
-                while nums[mid-1] == target: 
-
-                    mid = (hi + lo) // 2
-
-                    if nums[mid-1] != target: # If we're at the first instance
-                        return [mid, mid+1]
-                    elif nums[mid-1] == target: # If going down gets us closer to our target
-                        print("Going left")
-                        hi = mid - 1 
-                    else: # Going higher gets us closer to our target
-                        print("Going right")
-                        lo = mid + 1
+                mid = (hi + lo) // 2
+                    
+                if nums[mid] == target:
+                    # If we're looking for the lower bound in a sorted list: 
+                    if lower and (nums[mid-1] < target): 
+                        return mid
+                    
+                    # If we're looking for the upper bound in a sorted list:
+                    elif (not lower) and (nums[mid+1] > target):
+                        return mid
                 
+                # If we we're not finding the range of targets; then keep searching
+
+                elif nums[mid] < target: 
+                    # Shift left 
+                    hi = mid - 1
+                else: 
+                    # Shift right 
+                    lo = mid + 1 
             
-            elif nums[mid] > target: 
-                # print("Going left")
-                hi = mid - 1
-            
-            else: 
-                # print("Going right")
-                lo = mid + 1 
-        
-        return [-1, -1]
+            return -1
+
+        return binarySearchLimits(nums, target, True), binarySearchLimits(nums, target, False)
+
 
         # Then look if +/- position 
 

@@ -1,0 +1,4 @@
+-- 1. Query from table where you get employee names 
+-- 2. Join from another table where you query for managers; 
+    -- Do an inner join on the employee table's manager ID and manager table's manager ID 
+-- 3. Then find where the salary for employee is greater than manager salary. 
