@@ -1,11 +1,19 @@
 -- ** Using a window function can work **
 
--- Get the score 
--- Use a window function to assign an score given the score descending
--- From the table 
--- Sort the resulting table in descending score 
+-- ** BEST SOLUTION **
+select score
+     , dense_rank() over (order by score desc) as rank
+from Scores
 
--- ** Getting a DENSE Ranked Result ** 
+-- ** MY SOLUTION ** 
 
--- Select each unique score 
--- Count how many distinct scores are smaller than or equal to the current score 
+SELECT 
+    s1.score,
+    (
+    SELECT 
+        COUNT(DISTINCT s2.score)
+    FROM Scores s2
+    WHERE s2.score >= s1.score
+    ) AS rank 
+FROM Scores s1
+ORDER BY score DESC
