@@ -45,3 +45,11 @@ var cancellable = function(fn, args, t) {
  *                           // ]
  *  }, cancelTimeMs + t + 15)    
  */
+
+// ** BEST SOLUTION **
+
+var cancellable = function(fn, args, t) {
+    fn(...args); // Call immediately
+    const intervalId = setInterval(() => fn(...args), t);
+    return () => clearInterval(intervalId);
+};
