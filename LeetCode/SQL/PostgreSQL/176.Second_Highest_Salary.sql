@@ -8,7 +8,7 @@ SELECT (
     LIMIT 1 OFFSET 1
 ) AS SecondHighestSalary
 
---- BEST SOLUTION ---
+--- **BEST SOLUTION** ---
 
 
 -- 1. Create a new table `sorted_salaries` that will have the second highest salary in the first row

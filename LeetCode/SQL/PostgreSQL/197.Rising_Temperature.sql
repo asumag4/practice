@@ -5,3 +5,11 @@ SELECT
 FROM Weather w1 
 JOIN Weather w2 ON w1.recordDate = w2.recordDate + 1 -- Gets the following day after!
     AND w1.temperature > w2.temperature -- Higher temperature for the following day
+
+-- ** BEST SOLUTION ** 
+
+SELECT w1.id
+FROM Weather w1
+JOIN Weather w2 
+ON w1.recordDate = w2.recordDate + Interval '1 day'
+WHERE w1.temperature > w2.temperature;
