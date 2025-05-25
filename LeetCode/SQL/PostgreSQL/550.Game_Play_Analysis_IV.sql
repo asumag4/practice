@@ -14,6 +14,7 @@ FROM Activity
 WHERE (player_id, event_date) IN (
     SELECT 
         a1.player_id,
-        a1.event_date + 1
+        MIN(a1.event_date) + 1
     FROM Activity a1
+    GROUP BY a1.player_id
 );
