@@ -1,3 +1,5 @@
+// ** MY SOLUTION **
+
 var TimeLimitedCache = function() {
     this.cache = {};
 };
@@ -67,3 +69,54 @@ TimeLimitedCache.prototype.count = function() {
  TimeLimitedCache.prototype.remove = function(key) {
     delete this.cache[key];
  };
+
+// ** BEST SOLUTION **
+
+var TimeLimitedCache = function() {
+    this.cache = {};
+};
+
+/** 
+ * @param {number} key
+ * @param {number} value
+ * @param {number} duration time until expiration in ms
+ * @return {boolean} if un-expired key already existed
+ */
+TimeLimitedCache.prototype.set = function(key, value, duration) {
+    const exp = Date.now() + duration;
+    let currentValue, currentExpiration, isExpired = true;
+    const cv = this.cache[key]
+    if (cv) {
+        // console.log(key)
+        // console.log(this.cache)
+        // console.log(this.cache[key])
+        // console.log(this.cache[key][0])
+        // console.log(this.cache[key][1])
+        // [currentValue, currentExpiration] = cv;
+        currentValue = cv[0];
+        currentExpiration = cv[1];
+        isExpired = Date.now() > currentExpiration;
+    }
+    this.cache[key] = [value, exp];
+    return !isExpired;
+};
+
+/** 
+ * @param {number} key
+ * @return {number} value associated with key
+ */
+TimeLimitedCache.prototype.get = function(key) {
+    let currentValue, currentExpiration, isExpired = true;
+    if (this.cache[key]) {
+        [currentValue, currentExpiration] = this.cache[key];
+        isExpired = Date.now() > currentExpiration;
+    }
+    return isExpired ? -1 : currentValue;
+};
+
+/** 
+ * @return {number} count of non-expired keys
+ */
+TimeLimitedCache.prototype.count = function() {
+    return Object.entries(this.cache).filter(([key,tuple]) => tuple[1] > Date.now()).length;
+};
