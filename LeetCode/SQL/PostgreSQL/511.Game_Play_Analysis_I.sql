@@ -1,0 +1,13 @@
+-- Write your PostgreSQL query statement below
+
+SELECT
+    player_id
+    ,MIN(event_date) AS first_login
+FROM Activity 
+GROUP BY player_id
+
+/* ======= BEST SOLUTION ======= */
+SELECT player_id,MIN( event_date) as first_login from Activity 
+group by player_id
+
+-- Better performance by no indentations and shitty formatting
