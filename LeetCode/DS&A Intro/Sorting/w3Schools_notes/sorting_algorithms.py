@@ -113,8 +113,64 @@ class Sorting_Algorithms():
         # return     
         return arr 
     
+    def quick_sort(self, arr):
 
+        # Define a sub-function `partition()`, <- that will take in 
+            #   <- arr
+            #   <- low
+            #   <- high
+            #   -> index + 1
+        
 
+            # Initialize the pivot, which will be the value at the last position of the arr
+            # Hold the position `i` of the -1 position of the sub-array
+            # for elems between low and high range 
+                # if the element is less than or equal to the pivot 
+                # increment `i`
+                # Then make a switch between elem and `i`
+            # return `i`
+
+        # Define `quicksort()`
+        #   <- arr
+        #   <- low; default to 0 
+        #   <- high; default to None 
+        #   -> None 
+
+        # if high is None 
+            # Then set high to be the length of the array (-1)
+        # if low is less than high
+            # hold the pivot index by calling `partition()`
+            # recursively call quicksort(), but with pivot_index - 1 as the high
+            # recursively call quicksort(), but with pivot_index + 1 as the low 
+
+    def merge_sort(arr):
+
+        # Define `mergeSort()` sub function 
+        #   <- arr
+        #   -> merge() call 
+
+            # Grab the middle position of the arr
+            # Grab the left-half of the arr (actual values)
+            # Grab the right-half of the arr (actual values) (will contain the middle value too)
+
+            # return by calling the merge() function on these two halves 
+
+        # Define `merge()` sub function 
+            # Initilize an empty `result` arr
+            # set your counter variables `i` & `j` = 0 
+
+            # While i is less than the length of the left sub-array and j is more than the length of the right array
+                # If `i` in the left array is less than the `j` in the right array:
+                    # Append item `i` in the left array into result arr
+                    # increment `i`
+                # If not: 
+                    # append item `j` in the right array into result arr
+                    # increment `j`
+            
+            # If the while condition is no longer possible; then place all items of left from `i` -> end 
+            # Place all items of right from `j` -> onwards 
+
+            # Return the result 
 
 # TESTING 
 algos = Sorting_Algorithms()
