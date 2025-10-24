@@ -115,62 +115,107 @@ class Sorting_Algorithms():
     
     def quick_sort(self, arr):
 
+        def partition(arr, low, high):
         # Define a sub-function `partition()`, <- that will take in 
             #   <- arr
             #   <- low
             #   <- high
             #   -> index + 1
-        
 
             # Initialize the pivot, which will be the value at the last position of the arr
+            piv = arr[high]      
             # Hold the position `i` of the -1 position of the sub-array
-            # for elems between low and high range 
+            i = low - 1 
+            # for elems between low and high range
+            for j in range(low, high):
                 # if the element is less than or equal to the pivot 
-                # increment `i`
-                # Then make a switch between elem and `i`
-            # return `i`
+                if (arr[j] <= piv):
+                    # increment `i`
+                    i += 1
+                    # Then make a switch between elem and `i`
+                    arr[j], arr[i] = arr[i], arr[j]
+            
+            # Make the switch between the highest value and the next item to be traversed
+            arr[i+1], arr[high] = arr[high], arr[i+1]
+            # return `i +1`` (because that's the last item we iterated over which becomes the next pivot point)
+            return i + 1 
 
+        def quicksort(arr, low, high):
         # Define `quicksort()`
         #   <- arr
         #   <- low; default to 0 
         #   <- high; default to None 
         #   -> None 
 
-        # if high is None 
-            # Then set high to be the length of the array (-1)
-        # if low is less than high
-            # hold the pivot index by calling `partition()`
-            # recursively call quicksort(), but with pivot_index - 1 as the high
-            # recursively call quicksort(), but with pivot_index + 1 as the low 
+            # if high is None
+            if (high is None): 
+                # Then set high to be the length of the array (-1)
+                high = len(arr) - 1
+            # if low is less than high
+            if (low < high):
+                # hold the pivot index by calling `partition()`
+                piv = partition(arr, low, high)
+                # recursively call quicksort(), but with pivot_index - 1 as the high
+                quicksort(arr, low, piv - 1)
+                # recursively call quicksort(), but with pivot_index + 1 as the low
+                quicksort(arr, piv + 1, high) 
 
-    def merge_sort(arr):
+        return quicksort(arr)
 
+    def merge_sort(arr): 
+
+        # Define `merge()` sub function 
+        def merge(left, right):
+            # Initilize an empty `result` arr
+            results = []
+            # set your counter variables `i` & `j` = 0 
+            i = j = 0
+            # While i is less than the length of the left sub-array and j is less than the length of the right array
+            while ((i < len(left)) and (j < len(arr))):
+                # If `i` in the left array is less than the `j` in the right array:
+                if (left[i] < right[j]):
+                    # Append item `i` in the left array into result arr
+                    results.append(left[i])
+                    # increment `i`
+                    i += 1
+                # If not: 
+                else:
+                    # append item `j` in the right array into result arr
+                    results.append(right[j])
+                    # increment `j`
+                    j += 1
+            
+            # If the while condition is no longer possible; then place all items of left from `i` -> end 
+            results.extend(left[i:])
+            # Place all items of right from `j` -> onwards
+            results.extend(right[j:]) 
+            # Return the result 
+            return results
+
+        def mergeSort(arr):
         # Define `mergeSort()` sub function 
         #   <- arr
         #   -> merge() call 
 
+            # Have a base case; if the length of the arr is less than or equal to 1, then just return the arr
+            if len(arr) <= 1:
+                return arr
+
+            mid = len(arr) // 2
             # Grab the middle position of the arr
+            left = arr[:mid]
             # Grab the left-half of the arr (actual values)
+            right = arr[mid:]
             # Grab the right-half of the arr (actual values) (will contain the middle value too)
-
-            # return by calling the merge() function on these two halves 
-
-        # Define `merge()` sub function 
-            # Initilize an empty `result` arr
-            # set your counter variables `i` & `j` = 0 
-
-            # While i is less than the length of the left sub-array and j is more than the length of the right array
-                # If `i` in the left array is less than the `j` in the right array:
-                    # Append item `i` in the left array into result arr
-                    # increment `i`
-                # If not: 
-                    # append item `j` in the right array into result arr
-                    # increment `j`
             
-            # If the while condition is no longer possible; then place all items of left from `i` -> end 
-            # Place all items of right from `j` -> onwards 
+            # Then sort the two halves by iteratively calling mergeSort() on the two items
+            sortedLeft = mergeSort(left)
+            sortedRight = mergeSort(right) 
+            
+            return merge(left, right)
+            # return by calling the merge() function on these two halves
 
-            # Return the result 
+        return mergeSort(arr)
 
 # TESTING 
 algos = Sorting_Algorithms()
