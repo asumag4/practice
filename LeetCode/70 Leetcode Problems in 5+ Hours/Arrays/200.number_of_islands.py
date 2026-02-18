@@ -1,33 +1,54 @@
+from collections import deque
+
 class Solution:
     def numIslands(self, grid: list[list[str]]) -> int:
         
-        dummy = [[0] * len(grid[0]) for i in range(0,len(grid))]
-        counter = 0
-        x_end = len(grid[0]) - 1
-        y_end = len(grid) - 1 
+        traversed = []
+        counter = 0  
+        x_len = len(grid[0]) - 1
+        y_len = len(grid) - 1
 
-        def traverse(x,y):
-            global counter 
+        def scopeIsland(x, y):
 
-            if ((x == x_end) and (y == y_end)):
-                return
+            q = deque([(x,y)])
+
+            while q:
+                
+                print(q)
+                n_x, n_y = q.popleft()
+
+                for dir_x, dir_y in ([(-1,0), (0,1), (1,0), (0,-1)]):
+
+                    if (n_x + dir_x, n_y + dir_y) in traversed:
+                        continue
+                    else: 
+                        if (
+                            n_x < x_len and
+                            n_x > 0 and
+                            n_y < y_len and
+                            n_y > 0
+                        ):
+                            if (grid[n_x + dir_x][n_y + dir_y] == "1"):
+                                q.append((n_x + dir_x, n_y + dir_y))
+                            traversed.append((n_x + dir_x, n_y + dir_y))
             
-            while x <= x_end:
-                x += 1
 
-                if grid[y][x] == 1:
-                    dummy[y][x] == counter 
-                    left = traverse(x+1,y)
-                    bottom = traverse(x,y+1)
-                    
-                if (left or bottom):
-                    return True
+        for x in range(0,len(grid)):
+            for y in range(0, len(grid[0])):
+
+                # print(grid[i][j])
+
+                if (x,y) in traversed:
+                    continue
                 else:
-                    counter += 1
-                    return False
-        
-        traverse(0,0)
-        print(dummy)
+                    if (grid[x][y] == "1"): 
+                        # print("Found an island!")
+                        counter += 1
+                        scopeIsland(x,y)
+                    else: 
+                        traversed.append((x,y))
+
+        return counter
         
 
 sol = Solution()
@@ -36,4 +57,10 @@ print(sol.numIslands([
   ["1","1","0","1","0"],
   ["1","1","0","0","0"],
   ["0","0","0","0","0"]
-]))
+])) # 1
+print(sol.numIslands([
+  ["1","1","0","0","0"],
+  ["1","1","0","0","0"],
+  ["0","0","1","0","0"],
+  ["0","0","0","1","1"]
+])) # 3
