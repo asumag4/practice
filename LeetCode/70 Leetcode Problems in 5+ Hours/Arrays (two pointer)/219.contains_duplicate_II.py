@@ -1,17 +1,14 @@
 class Solution:
     def containsNearbyDuplicate(self, nums: list[int], k: int) -> bool:
 
+        seen = set()
         for i, num in enumerate(nums):
-
-            if num in nums[i+1:]:
-                print(f"Found {num} in {nums[i+1:]}")
-                j = nums[i+1:].index(num)
-                j += i + 1
-                if abs(i-j) <= k:
-                    print(i, j)
-                    return True
-                else:
-                    continue
+            if num in seen:
+                return True
+            seen.add(num)
+            if len(seen) > k:
+                seen.remove(nums[i-k])
+        return False
     
 sol = Solution()
 print(sol.containsNearbyDuplicate(nums = [1,2,3,1], k = 3))
