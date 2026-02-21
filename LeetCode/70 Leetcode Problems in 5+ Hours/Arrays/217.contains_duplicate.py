@@ -1,3 +1,5 @@
+# beats 55.14%
+
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         if (len(nums) > len(set(nums))):

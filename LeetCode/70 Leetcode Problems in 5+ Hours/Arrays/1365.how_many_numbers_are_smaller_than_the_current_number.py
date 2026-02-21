@@ -1,3 +1,5 @@
+# Beats 76.96%
+
 # class Solution:
 #     def smallerNumbersThanCurrent(self, nums: list[int]) -> list[int]:
 #         hmap = {}

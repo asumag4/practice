@@ -1,3 +1,5 @@
+# Beats 31.73%
+
 class Solution:
     def maxProfit(self, prices: list[int]) -> int:
         

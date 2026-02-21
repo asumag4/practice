@@ -1,3 +1,5 @@
+# Beats 8.56%
+
 class Solution:
     def longestMountain(self, arr: list[int]) -> int:
         

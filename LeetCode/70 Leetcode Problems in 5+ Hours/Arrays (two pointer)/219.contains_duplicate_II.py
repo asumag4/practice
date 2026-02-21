@@ -1,13 +1,23 @@
+# Beats 5%
+
 class Solution:
     def containsNearbyDuplicate(self, nums: list[int], k: int) -> bool:
 
-        seen = set()
-        for i, num in enumerate(nums):
-            if num in seen:
+        hmap = {}
+
+        for i, n in enumerate(nums):
+
+            print(f"{i},{n}")
+
+            if n in hmap:
                 return True
-            seen.add(num)
-            if len(seen) > k:
-                seen.remove(nums[i-k])
+            else:
+                hmap[n] = i
+            
+            if (i + 1) > k:
+                first_key = next(iter(hmap))
+                del hmap[first_key]
+        
         return False
     
 sol = Solution()
