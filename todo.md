@@ -7,29 +7,17 @@
 [] - 182. Duplicate Emails (E)
 [] - 181. Employees Earning More Than Thier Managers 
 
-[] - 95. Unique Binary Search Trees II
-
-[] - 30 days of JS 
+**30 Days of JS**
+[] - Remaining 4 more questions
 
 #### Data Structures and Algorithms:
 
-**Binary Search** 
-[X] - 33. Search in Rotated List (M)
-[X] - 34. Find First and Last Position of Element in Sorted Array (M)
+[Youtube Video](https://www.youtube.com/watch?v=lvO88XxNAzs&t=4s)
 
-**Binary Trees**
-[X] - Binary Tree Inorder Traversal
-[X] - 144. Binary Tree Post-order Traversal (E)
-[X] - 104. Maximum Depth of Binary Tree (E)
-[X] - Diameter of Binary Tree
-[X] - Binary Search
-
-**Hash Maps**
-[X] - 242. Valid Anagram
-[X] - 705. Design HashSet
-[X] - 706. Design Hashmap
-[ ] - 3. Longest Substring Without Repeating Characters
-[ ] - 217. Contains Duplicates
+Queued Questions:
+- (Mar 10/26) 92. Reversed Linked List II
+- (Mar 10/26) 2073. Time Needed to Buy Tickets
+- (Mar 9/26) Geeks For Geeks: Reversing First K Elements of Queue using Stack
 
 
 ## CodeWars 
