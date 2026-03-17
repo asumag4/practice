@@ -15,9 +15,6 @@
 [Youtube Video](https://www.youtube.com/watch?v=lvO88XxNAzs&t=4s)
 
 Queued Questions:
-- (Mar 10/26) 92. Reversed Linked List II
-- (Mar 10/26) 2073. Time Needed to Buy Tickets
-- (Mar 9/26) Geeks For Geeks: Reversing First K Elements of Queue using Stack
 
 
 ## CodeWars 
