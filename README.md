@@ -16,6 +16,8 @@
 
 Queued Questions:
 
+March 25:
+- 1382. Balance A Binary Seaarch Tree
 
 ## CodeWars 
 
