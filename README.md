@@ -16,10 +16,8 @@
 
 Queued Questions:
 
-March 25:
-- 1382. Balance A Binary Seaarch Tree
 March 26:
-- 450. Delete Noe in a BST
+- 450. Delete Node in a BST
 
 ## CodeWars 
 

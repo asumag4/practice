@@ -7,36 +7,30 @@
 class Solution:
     def balanceBST(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         
-        self.node_vals = set()
+        self.vals = []
 
-        # Traverse the nodes in-order
-        def inOrderTraversal(node):
+        def inOrderTraverse(node):
 
             if (not node):
                 return
-            
-            inOrderTraversal(node.left)
-            self.node_vals.add(node.val)
-            inOrderTraversal(node.right)
+
+            left = inOrderTraverse(node.left)
+            self.vals.append(node.val)
+            right = inOrderTraverse(node.right)
 
             return
+        
+        def buildBalancedTree(l, r):
 
-        # Then have a function to build in accordance to 
-        def buildBalancedBST(l, r):
-            
             if (l > r):
-                return None
+                return
             
-            mid = ((r - l) // 2) + l 
-
-            node = TreeNode(val = self.node_vals_lst[mid])
-            node.left = buildBalancedBST(l, mid-1)
-            node.right = buildBalancedBST(mid+1, r)
+            mid = (l + r) // 2
+            node = TreeNode(val = self.vals[mid])
+            node.left = buildBalancedTree(l, mid - 1)
+            node.right = buildBalancedTree(mid + 1, r)
 
             return node
-
-        inOrderTraversal(root)
-        self.node_vals_lst = list(self.node_vals)
-        return buildBalancedBST(0, len(self.node_vals_lst)-1)
-
-        # Have a main
+        
+        inOrderTraverse(root)
+        return buildBalancedTree(0, len(self.vals) - 1)
