@@ -16,8 +16,12 @@
 
 Queued Questions:
 
-March 26:
-- 450. Delete Node in a BST
+April 1:
+- 621 Task Scheduler
+- 1615 maximal Network Rank
+  
+April 2:
+- 207 Course Schedule
 
 ## CodeWars 
 

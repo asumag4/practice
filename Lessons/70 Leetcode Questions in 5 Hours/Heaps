@@ -1,0 +1,276 @@
+Welcome to heaps. By the end of this lecture you should be able to implement one from scratch, use Python's `heapq` fluently, and recognize every pattern heaps appear in on LeetCode. Let's build this from first principles.
+
+---
+
+## 1. What is a heap?
+
+A heap is a **complete binary tree** that obeys the **heap property**. Those two constraints together are the entire definition — everything else follows from them.
+
+**Complete binary tree** means: every level is fully filled except possibly the last, and the last level fills from left to right. No gaps, no skipping.
+
+**Heap property** comes in two flavors. In a **min-heap**, every parent is ≤ its children — so the smallest element is always at the root. In a **max-heap**, every parent is ≥ its children — the largest is at the root.
+
+The first thing to internalize is how this compares to a BST, since you know those well. In a BST, the ordering constraint is *global* — everything in a node's left subtree is smaller, everything in its right is larger. In a heap, the constraint is only *local* — a parent just needs to beat its direct children. There is no guarantee about ordering between left and right subtrees at all. This makes the heap a "weaker" structure, but that weakness is precisely what makes it efficient to maintain.
+
+Here's a valid min-heap `[1, 3, 2, 8, 5, 7, 4]` in both its tree form and its array representation:
+
+## 2. The array representation — the key insight
+
+The "complete binary tree" constraint is not cosmetic. It's what makes heaps uniquely efficient: **a complete binary tree can be stored perfectly in a plain array with zero pointers**. The mapping is exact because there are no gaps.
+
+Given a node at index `i`:
+- Its **parent** is at `(i - 1) // 2`
+- Its **left child** is at `2i + 1`
+- Its **right child** is at `2i + 2`
+- **Leaf nodes** start at index `n // 2`
+
+This is O(1) navigation. No `node.left`, no `node.parent` pointer — just arithmetic on indices. The tree structure is entirely implicit.
+
+Verify it on the diagram above: node at `i=1` (val=3) has children at `2(1)+1=3` (val=8) and `2(1)+2=4` (val=5). Its parent is `(1-1)//2=0` (val=1, the root). ✓
+
+---
+
+## 3. Core operations
+
+There are really only two fundamental operations, and everything else is built on them.
+
+### Insert → sift-up (bubble-up)
+
+Append the new element to the end of the array, then repeatedly swap it with its parent while it's smaller than its parent. The new element "bubbles up" to its correct position.
+
+Time: **O(log n)** — the tree height is `⌊log₂ n⌋`, so at most that many swaps.
+
+### Extract-min → sift-down (bubble-down)
+
+Swap the root with the last element, remove the last element (which was the minimum), then push the new root downward — at each step, swapping with the *smaller* of its two children. This restores the heap property.
+
+Time: **O(log n)** — at most one swap per level.
+
+### Heapify (building from an array) → O(n)
+
+This one surprises people. To build a heap from an arbitrary array, you call sift-down on every non-leaf node, starting from the last non-leaf (`n//2 - 1`) and going up to the root.
+
+Why O(n) and not O(n log n)? Because most nodes are near the bottom where sift-down is cheap. Half the nodes are leaves (0 work), a quarter can sink at most 1 level, an eighth at most 2, and so on. The sum of this geometric series converges to O(n). This is actually a non-trivial result — the proof uses the summation `∑ k/2^k = 2`.
+
+---
+
+## 4. Interactive visualizer
+
+Use this to build intuition. Insert a small value like `1` to see sift-up, or click Extract min to see sift-down. Try inserting `100` to see when sift-up does nothing.
+
+## 5. Python's `heapq` module
+
+Python's `heapq` implements a **min-heap only**. It operates on plain lists in-place — there is no `Heap` class.
+
+```python
+import heapq
+
+# Build from existing list — O(n)
+data = [5, 3, 8, 1, 9, 2, 7]
+heapq.heapify(data)          # transforms data IN-PLACE
+print(data[0])               # 1 — the minimum, always at index 0
+
+# Insert — O(log n)
+heapq.heappush(data, 4)
+
+# Extract min — O(log n)
+minimum = heapq.heappop(data)
+
+# Peek min without removing — O(1)
+minimum = data[0]
+
+# Efficient combined operations
+heapq.heappushpop(data, 6)   # push then pop (one sift, not two)
+heapq.heapreplace(data, 6)   # pop then push (faster than separate calls)
+
+# Convenience utilities — work on any iterable, not just a heap
+heapq.nsmallest(3, data)     # O(n log k)
+heapq.nlargest(3, data)      # O(n log k)
+```
+
+**Critical Python-specific rules:**
+
+`heapify` is O(n) — this is not `n` calls to `heappush`. Never do `for x in data: heapq.heappush(h, x)` to build from scratch when you have all elements upfront; use `heapify`.
+
+`heappop` returns and removes the root. `data[0]` just peeks. Do not confuse them.
+
+The list after `heapify` is **not sorted** — it's only heap-ordered. `data[1]` is not necessarily the second smallest.
+
+---
+
+## 6. The max-heap trick
+
+Python has no built-in max-heap. The standard trick: **negate all values**.
+
+```python
+import heapq
+
+# Max-heap by negating
+h = []
+for val in [3, 1, 8, 5, 2]:
+    heapq.heappush(h, -val)   # store negative
+
+maximum = -heapq.heappop(h)   # negate on the way out → 8
+
+# Or to heapify in-place:
+data = [3, 1, 8, 5, 2]
+data = [-x for x in data]
+heapq.heapify(data)
+maximum = -heapq.heappop(data)
+```
+
+For **tuples** (the more common pattern), the heap sorts by the first element, then second, etc. This lets you attach metadata:
+
+```python
+# Priority queue pattern: (priority, item)
+h = []
+heapq.heappush(h, (2, 'task_b'))
+heapq.heappush(h, (1, 'task_a'))   # lower number = higher priority
+heapq.heappush(h, (3, 'task_c'))
+
+priority, task = heapq.heappop(h)  # (1, 'task_a')
+
+# Max-heap with tuples: negate the priority
+heapq.heappush(h, (-score, item))
+_, best = heapq.heappop(h)
+```
+
+One gotcha: if two tuples have the same first element, Python will compare the second element. If your items aren't comparable (e.g. custom objects), add a tie-breaking counter as the second element:
+
+```python
+counter = 0
+heapq.heappush(h, (priority, counter, item))
+counter += 1
+```
+
+---
+
+## 7. The five patterns heaps appear in
+
+Heaps show up in a surprisingly small number of recognizable problem shapes. Once you see these, you'll instantly know when to reach for `heapq`.
+
+**Pattern 1: Kth largest / Kth smallest**
+
+For Kth largest — maintain a min-heap of size k. When the heap exceeds k, pop the minimum. After all elements, the root is the Kth largest.
+
+```python
+def find_kth_largest(nums, k):
+    h = []
+    for n in nums:
+        heapq.heappush(h, n)
+        if len(h) > k:
+            heapq.heappop(h)    # evict elements smaller than Kth largest
+    return h[0]                 # root = Kth largest
+```
+
+Why a min-heap for "Kth largest"? Counterintuitive but correct: you want the k largest elements, and among those, you want to quickly find and discard the smallest one when the window overflows. The min is the "weakest" in the kept set.
+
+**Pattern 2: Top-K elements / K most frequent**
+
+Same as above — a size-k heap where you evict the unworthy. For frequency problems, push `(freq, element)` tuples.
+
+```python
+def top_k_frequent(nums, k):
+    freq = Counter(nums)
+    return heapq.nlargest(k, freq, key=freq.get)
+    # or manually: push (-freq, elem), pop k times
+```
+
+**Pattern 3: Merge K sorted lists/arrays**
+
+Push the first element from each list onto the heap. Each pop gives you the current global minimum; then push that list's next element.
+
+```python
+def merge_k_sorted(lists):
+    h = []
+    result = []
+    for i, lst in enumerate(lists):
+        if lst:
+            heapq.heappush(h, (lst[0], i, 0))  # (value, list_index, elem_index)
+    while h:
+        val, li, ei = heapq.heappop(h)
+        result.append(val)
+        if ei + 1 < len(lists[li]):
+            heapq.heappush(h, (lists[li][ei+1], li, ei+1))
+    return result
+```
+
+Time: O(n log k) where n = total elements, k = number of lists.
+
+**Pattern 4: Sliding window minimum/maximum**
+
+A heap (combined with lazy deletion) can maintain a running min/max over a window. The trick is "lazy deletion" — mark elements as invalid and skip them when popping.
+
+```python
+def sliding_window_minimum(nums, k):
+    h = []     # (value, index)
+    result = []
+    for i, n in enumerate(nums):
+        heapq.heappush(h, (n, i))
+        while h[0][1] <= i - k:   # lazy-delete elements outside window
+            heapq.heappop(h)
+        if i >= k - 1:
+            result.append(h[0][0])
+    return result
+```
+
+**Pattern 5: Scheduling / Greedy with priority**
+
+Dijkstra's shortest path, Prim's MST, task schedulers — any problem where you repeatedly pick the "cheapest" or "highest priority" next action. Dijkstra in a nutshell:
+
+```python
+def dijkstra(graph, start):
+    dist = {start: 0}
+    h = [(0, start)]           # (distance, node)
+    while h:
+        d, u = heapq.heappop(h)
+        if d > dist.get(u, float('inf')): continue   # stale entry
+        for v, w in graph[u]:
+            if d + w < dist.get(v, float('inf')):
+                dist[v] = d + w
+                heapq.heappush(h, (d + w, v))
+    return dist
+```
+
+The heap gives you the unvisited node with shortest known distance in O(log n) instead of O(n) for a naïve scan.
+
+---
+
+## 8. Complexity summary
+
+| Operation | Time | Notes |
+|-----------|------|-------|
+| `heappush` | O(log n) | sift-up |
+| `heappop` | O(log n) | sift-down |
+| `heapify` | **O(n)** | not O(n log n) |
+| peek (`h[0]`) | O(1) | read root only |
+| `nlargest(k, iter)` | O(n log k) | |
+| `nsmallest(k, iter)` | O(n log k) | |
+
+**Space**: O(n) for the heap array.
+
+**Height**: ⌊log₂ n⌋ — a heap of 1,000,000 elements has a height of ~20.
+
+---
+
+## 9. LeetCode problems to practice (in order)
+
+| Problem | Pattern | Difficulty |
+|---------|---------|------------|
+| 703 — Kth Largest Element in a Stream | size-k min-heap | Easy |
+| 215 — Kth Largest Element in an Array | size-k min-heap | Medium |
+| 347 — Top K Frequent Elements | (freq, elem) heap | Medium |
+| 1046 — Last Stone Weight | max-heap simulation | Easy |
+| 23 — Merge K Sorted Lists | k-way merge | Hard |
+| 295 — Find Median from Data Stream | two-heap trick | Hard |
+| 743 — Network Delay Time | Dijkstra | Medium |
+| 621 — Task Scheduler | greedy + heap | Medium |
+| 239 — Sliding Window Maximum | deque or lazy heap | Hard |
+
+The two-heap trick in problem 295 (median of a stream) is a particularly beautiful pattern: maintain a max-heap for the lower half and a min-heap for the upper half, keeping their sizes balanced. The median is always at one of the two roots.
+
+---
+
+One thing to watch immediately given your patterns: the `list.sort()` returns `None` bug you've hit before has a natural cousin here. `heapq.heappop(h)` **returns** the value — never discard it. And `heapq.heappush(h, x)` returns `None` — the heap is modified in-place. These are the two operations you'll call hundreds of times; make sure the return-vs-side-effect distinction is automatic.
+
+Where do you want to go next — start drilling problems, or do you want me to walk through the two-heap median trick in detail first?
