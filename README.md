@@ -15,12 +15,8 @@
 [Youtube Video](https://www.youtube.com/watch?v=lvO88XxNAzs&t=4s)
 
 Queued Questions:
-  
-April 4:
-- 207 Course Schedule
 
 April 5:
-- 621 Task Scheduler
 - 787 Cheapest Flights Within K Stops
 
 ## CodeWars 
