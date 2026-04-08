@@ -14,10 +14,8 @@
 
 [Youtube Video](https://www.youtube.com/watch?v=lvO88XxNAzs&t=4s)
 
-Queued Questions:
+Queue:
 
-April 5:
-- 787 Cheapest Flights Within K Stops
 
 ## CodeWars 
 
