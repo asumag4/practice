@@ -1,18 +1,20 @@
 -- My Answer
 
-SELECT 
-  t.candidate_id
+SELECT
+  candidate_id
 FROM (
--- Fix this sub-table
-  SELECT 
-    candidate_id, 
-    string_agg(skill, ', ') AS skill
+  SELECT
+    *
   FROM candidates
-  WHERE skill IN ('Python','Tableau','PostgreSQL')
-  GROUP BY candidate_id
-) AS t
-WHERE t.skill LIKE '%Python, Tableau, PostgreSQL%';
--- https://stackoverflow.com/questions/43870/how-to-concatenate-strings-of-a-string-field-in-a-postgresql-group-by-query
+  WHERE 
+    skill IN (
+    'Python'
+    ,'Tableau'
+    ,'PostgreSQL'
+    ) 
+  ) filtered
+GROUP BY candidate_id
+HAVING COUNT(candidate_id) >= 3
 
 -- Best Answer 
 SELECT 
