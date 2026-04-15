@@ -1,3 +1,12 @@
-name,difficulty,solved,solved_under_time,solved_best_solution,solved_best_solution_under_time
-Data Science Skills,Easy,TRUE,TRUE,FALSE,FALSE
-Page With No Likes (4 best solutions),Easy,TRUE,TRUE,FALSE,FALSE
+name,difficulty,solved,solved_under_time,solved_best_solution,solved_best_solution_under_time,last_visited
+Data Science Skills,Easy,TRUE,TRUE,FALSE,FALSE,12/04/2026
+Page With No Likes (4 best solutions),Easy,TRUE,TRUE,FALSE,FALSE,12/04/2026
+Unfinished Parts,Easy,TRUE,TRUE,TRUE,TRUE,13/04/2026
+Laptop vs. Mobile Viewership,Easy,FALSE,FALSE,FALSE,FALSE,13/04/2026
+Average Post Hiatus,Easy,FALSE,FALSE,FALSE,FALSE,13/04/2026
+Teams Power Users,Easy,FALSE,FALSE,FALSE,FALSE,14/04/2026
+Duplicate Job Listings,Easy,TRUE,TRUE​,TRUE​,TRUE​,14/04/2026
+Cities With Completed Trades,Easy,FALSE,FALSE,FALSE,FALSE,14/04/2026
+Average Review Ratings,Easy,TRUE,TRUE,FALSE,FALSE,14/04/2026
+Well Paid Employees,Easy,TRUE,TRUE,FALSE,FALSE,14/04/2026
+Final Account Balance,Easy,TRUE,TRUE,FALSE,FALSE,14/04/2026
