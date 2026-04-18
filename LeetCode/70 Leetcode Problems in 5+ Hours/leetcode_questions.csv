@@ -20,7 +20,7 @@ key,name,Studied 100% TC,completed in time,completed to 100%,Date Last Visited
 108,Convert Sorted Array to Binary Search Tree,,,,
 701,Insert into a Binary Search Tree,,,,
 700,Search in a Binary Search Tree,TRUE,TRUE,FALSE,11/04/26
-226,Invert Binary Tree,,,,
+226,Invert Binary Tree,TRUE,TRUE,TRUE,17/04/26
 100,Same Tree,,,,
 102,Binary Tree Level Order Traversal,,,,
 104,Maximum Depth of Binary Tree,,,,
