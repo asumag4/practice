@@ -30,7 +30,7 @@ key,name,Studied 100% TC,completed in time,completed to 100%,Date Last Visited
 637,Average of Levels in Binary Tree,,,,
 912,Sort an Array,,,,
 20,Valid Parentheses,,,,
-21,Merge Two Sorted Lists,,,,
+21,Merge Two Sorted Lists,TRUE,FALSE,FALSE,19/04/26
 225,Implement Stack using Queues,TRUE,FALSE,FALSE,11/04/26
 203,Remove Linked List Elements,,,,
 206,Reverse Linked List,,,,
@@ -60,7 +60,7 @@ key,name,Studied 100% TC,completed in time,completed to 100%,Date Last Visited
 121,Best Time to Buy and Sell Stock,,,,
 1266,Minimum Time Visiting All Points,,,,
 1365,How Many Numbers Are Smaller Than the Current Number,,,,
-1,Two Sum,,,,
+1,Two Sum,TRUE,TRUE,TRUE,19/04/2026
 268,Missing Number,,,,
 448,Find All Numbers Disappeared in an Array,,,,
 217,Contains Duplicate,,,,

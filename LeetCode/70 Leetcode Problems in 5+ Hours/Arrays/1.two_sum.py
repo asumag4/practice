@@ -1,14 +1,13 @@
-# Beats 55.14%
-
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
+        
+        traversed = {}
 
-        idx_tabulator = {}
- 
-        for idx, val in enumerate(nums):
+        # Traverse all the numbers
+        for i, val in enumerate(nums):
+        
+            # For each number, check if the number exists in the
             diff = target - val
-
-            if diff in idx_tabulator.keys():
-                return [idx_tabulator[diff], idx]
-            
-            idx_tabulator[val] = idx
+            if (diff in traversed.keys()):
+                return [i,traversed[diff]]
+            traversed[val] = i 
