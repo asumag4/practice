@@ -17,7 +17,7 @@ key,name,Studied 100% TC,completed in time,completed to 100%,Date Last Visited
 543,Diameter of Binary Tree,,,,
 112,Path Sum,FALSE,FALSE,FALSE,12/04/26
 235,Lowest Common Ancestor of a Binary Search Tree,,,,
-108,Convert Sorted Array to Binary Search Tree,,,,
+108,Convert Sorted Array to Binary Search Tree,TRUE,FALSE,FALSE,28/06/26
 701,Insert into a Binary Search Tree,,,,
 700,Search in a Binary Search Tree,TRUE,TRUE,FALSE,11/04/26
 226,Invert Binary Tree,TRUE,TRUE,TRUE,17/04/26
@@ -47,7 +47,7 @@ key,name,Studied 100% TC,completed in time,completed to 100%,Date Last Visited
 338,Counting Bits,,,,
 53,Maximum Subarray,,,,
 70,Climbing Stairs,,,,
-322,Coin Change,,,,
+322,Coin Change,TRUE,FALSE,FALSE,28/06/26
 209,Minimum Size Subarray Sum,,,,
 136,Single Number,,,,
 15,3Sum,,,,

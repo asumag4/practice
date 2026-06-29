@@ -1,35 +1,36 @@
 name,difficulty,solved,solved_under_time,solved_best_solution,solved_best_solution_under_time,last_visited
-Data Science Skills,Easy,TRUE,TRUE,TRUE,TRUE,28/04/2026
-Page With No Likes (4 best solutions),Easy,TRUE,TRUE,FALSE,FALSE,28/04/2026
-Unfinished Parts,Easy,TRUE,TRUE,TRUE,TRUE,14/04/2026
-Laptop vs. Mobile Viewership,Easy,TRUE,TRUE,TRUE,TRUE,28/04/2026
-Average Post Hiatus,Easy,TRUE,TRUE,TRUE,TRUE,28/04/2026
-Teams Power Users,Easy,TRUE,TRUE,TRUE,TRUE,15/04/2026
-Duplicate Job Listings,Easy,TRUE,TRUE​,TRUE​,TRUE​,14/04/2026
-Cities With Completed Trades,Easy,TRUE,TRUE,TRUE,TRUE,28/04/2026
-Average Review Ratings,Easy,TRUE,TRUE,TRUE,TRUE,28/04/2026
-Well Paid Employees,Easy,TRUE,TRUE,TRUE,TRUE,28/04/2026
-Final Account Balance,Easy,TRUE,TRUE,TRUE,TRUE,28/04/2026
-App Click-through Rate (CTR),Easy,TRUE,TRUE,TRUE,TRUE,28/04/2026
-Second Day Confirmation,Easy,TRUE,TRUE,TRUE,TRUE,15/04/2026
-IBM db2 Product Analytics,Easy,FALSE,FALSE,FALSE,FALSE,29/04/2026
-Cards Issued Difference,Easy,TRUE,TRUE,TRUE,TRUE,29/04/2026
-Compressed Mean,Easy,TRUE,TRUE,TRUE,TRUE,29/04/2026
-Pharmacy Analytics (Part 1),Easy,TRUE,TRUE,TRUE,TRUE,16/04/2026
-Pharmacy Analytics (Part 2),Easy,TRUE,TRUE,FALSE,FALSE,29/04/2026
-Patient Support Analysis (Part1),Easy,TRUE,TRUE,TRUE,TRUE,16/04/2026
-User's Third Transaction,Medium,TRUE,TRUE,TRUE,TRUE,17/04/2026
-Second Highest Salary,Medium,TRUE,TRUE,TRUE,TRUE,17/04/2026
-User's Third Transaction,Medium,TRUE,TRUE,TRUE,TRUE,18/04/2026
-Sending vs Opening Snaps,Medium,TRUE,TRUE,TRUE,TRUE,18/04/2026
-Tweet's Rolling Averages,Medium,FALSE,FALSE,FALSE,FALSE,18/04/2026
-Highest-Grossing Items,Medium,FALSE,FALSE,FALSE,FALSE,18/04/2026
+Data Science Skills,Easy,TRUE,TRUE,TRUE,TRUE,01/05/2026
+Page With No Likes (4 best solutions),Easy,TRUE,TRUE,FALSE,FALSE,01/05/2026
+Unfinished Parts,Easy,TRUE,TRUE,TRUE,TRUE,03/05/2026
+Laptop vs. Mobile Viewership,Easy,TRUE,TRUE,TRUE,TRUE,08/05/2026
+Average Post Hiatus,Easy,TRUE,TRUE,TRUE,TRUE,14/04/2026
+Teams Power Users,Easy,TRUE,TRUE,TRUE,TRUE,14/04/2026
+Duplicate Job Listings,Easy,TRUE,TRUE​,TRUE​,TRUE​,15/04/2026
+Cities With Completed Trades,Easy,TRUE,TRUE,TRUE,TRUE,15/04/2026
+Average Review Ratings,Easy,TRUE,TRUE,TRUE,TRUE,16/04/2026
+Well Paid Employees,Easy,TRUE,TRUE,TRUE,TRUE,16/04/2026
+Final Account Balance,Easy,TRUE,TRUE,TRUE,TRUE,17/04/2026
+App Click-through Rate (CTR),Easy,TRUE,TRUE,TRUE,TRUE,17/04/2026
+Second Day Confirmation,Easy,TRUE,TRUE,TRUE,TRUE,18/04/2026
+IBM db2 Product Analytics,Easy,FALSE,FALSE,FALSE,FALSE,18/04/2026
+Cards Issued Difference,Easy,TRUE,TRUE,TRUE,TRUE,18/04/2026
+Compressed Mean,Easy,TRUE,TRUE,TRUE,TRUE,18/04/2026
+Pharmacy Analytics (Part 1),Easy,TRUE,TRUE,TRUE,TRUE,19/05/2026
+Pharmacy Analytics (Part 2),Easy,TRUE,TRUE,FALSE,FALSE,24/06/2026
+Patient Support Analysis (Part1),Easy,TRUE,TRUE,TRUE,TRUE,25/06/2026
+User's Third Transaction,Medium,TRUE,TRUE,TRUE,TRUE,25/06/2026
+Second Highest Salary,Medium,TRUE,TRUE,TRUE,TRUE,25/06/2026
+User's Third Transaction,Medium,TRUE,TRUE,TRUE,TRUE,28/04/2026
+Sending vs Opening Snaps,Medium,TRUE,TRUE,TRUE,TRUE,28/04/2026
+Tweet's Rolling Averages,Medium,FALSE,FALSE,FALSE,FALSE,28/04/2026
+Highest-Grossing Items,Medium,FALSE,FALSE,FALSE,FALSE,28/04/2026
 Top Three Salaries,Medium,FALSE,FALSE,FALSE,FALSE,28/04/2026
-Signup Activation Rate,Medium,TRUE,TRUE,FALSE,FALSE,29/04/2026
-Supercloud Customer,Medium,TRUE,TRUE,FALSE,FALSE,01/05/2026
-Odd and Even Measurements,Medium,TRUE,TRUE,FALSE,FALSE,01/05/2026
-Swapped Food Delivery,Medium,TRUE,TRUE,FALSE,FALSE,03/05/2026
-FAANG Stock Min-Max (Part 1),Medium,TRUE,FALSE,FALSE,FALSE,08/05/2026
-User Shopping Sprees,Medium,TRUE,FALSE,FALSE,FALSE,05/19/2026
-Histogram of Users and Purchases,Medium,TRUE,TRUE,FALSE,FALSE,05/26/2026
-Compressed Mode,Medium,TRUE,TRUE,FALSE,FALSE,06/24/2026
+Signup Activation Rate,Medium,TRUE,TRUE,FALSE,FALSE,28/04/2026
+Supercloud Customer,Medium,TRUE,TRUE,FALSE,FALSE,28/04/2026
+Odd and Even Measurements,Medium,TRUE,TRUE,FALSE,FALSE,28/04/2026
+Swapped Food Delivery,Medium,TRUE,TRUE,FALSE,FALSE,28/04/2026
+FAANG Stock Min-Max (Part 1),Medium,TRUE,FALSE,FALSE,FALSE,28/04/2026
+User Shopping Sprees,Medium,TRUE,FALSE,FALSE,FALSE,29/04/2026
+Histogram of Users and Purchases,Medium,TRUE,TRUE,FALSE,FALSE,29/04/2026
+Compressed Mode,Medium,TRUE,TRUE,FALSE,FALSE,29/04/2026
+Card Launch Success,Medium,TRUE,TRUE,TRUE,TRUE,29/04/2026
