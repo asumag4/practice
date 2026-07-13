@@ -43,7 +43,7 @@ key,name,Completed,Studied 100% TC,completed in time,completed to 100%,Date Last
 78,Subsets,FALSE,,,,
 77,Combinations,FALSE,,,,
 784,Letter Case Permutation,FALSE,,,,
-303,Range Sum Query - Immutable,FALSE,,,,
+303,Range Sum Query - Immutable,FALSE,TRUE,TRUE,FALSE,12/07/2026
 338,Counting Bits,FALSE,,,,
 53,Maximum Subarray,FALSE,,,,
 70,Climbing Stairs,FALSE,,,,
