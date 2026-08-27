@@ -1,7 +1,7 @@
 key,name,Completed,Studied 100% TC,completed in time,completed to 100%,Date Last Visited
 787,Cheapest Flights Within K Stops,FALSE,,,,
 621,Task Scheduler,FALSE,,,,
-207,Course Schedule,FALSE,,,,
+207,Course Schedule,FALSE,FALSE,FALSE,FALSE,2026/08/26
 1615,Maximal Network Rank,FALSE,,,,
 450,Delete Node in a BST,FALSE,,,,
 133,Clone Graph,FALSE,TRUE,FALSE,FALSE,2026/07/19

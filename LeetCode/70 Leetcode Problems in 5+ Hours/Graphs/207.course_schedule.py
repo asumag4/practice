@@ -1,33 +1,28 @@
-from collections import defaultdict
-
 class Solution:
-    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-        
-        courses = defaultdict(list)
-        for course, prereq in prerequisites:
-            courses[course].append(prereq)
 
-        taken = set()
-
-        def findPrereq(course):
-            # print(course, courses) # DEBUG
-
-            if not courses[course]: # Then there's no prereq
+    def colour_helper(self, graph: list, colour: list, k: int) -> bool:
+        colour[k] = 1
+        for edge in graph[k]:
+            if colour[edge] == 1:
                 return True
-            
-            if course in taken: # Then theres circular dependency
+            elif colour[edge] == 0:
+                    if self.colour_helper(graph, colour, edge):
+                        return True
+
+        colour[k] = 2
+        return False
+
+
+    def canFinish(self, numCourses: int, prerequisites: list[list[int]]) -> bool:
+        graph = [[] for _ in range(numCourses)]
+        for u, v in prerequisites:
+            graph[u].append(v)
+
+        colour = [0] * numCourses
+        for i in range(numCourses):
+            if self.colour_helper(graph, colour, i):
                 return False
 
-            taken.add(course)
-
-            for prereq in courses[course]:
-                if not findPrereq(prereq): return False
-
-            courses[course] = [] 
-
-            return True # Default case
-
-        for course, _ in prerequisites:
-            if not findPrereq(course): return False
-
         return True
+
+        
