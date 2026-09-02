@@ -15,7 +15,7 @@ key,name,Completed,Studied 100% TC,completed in time,completed to 100%,Date Last
 653,Two Sum IV - Input is a BST,FALSE,TRUE,TRUE,FALSE,2026/07/11
 236,Lowest Common Ancestor of a Binary Tree,FALSE,,,,
 543,Diameter of Binary Tree,FALSE,TRUE,FALSE,FALSE,2026/07/11
-112,Path Sum,FALSE,FALSE,FALSE,FALSE,2026/04/12
+112,Path Sum,TRUE,TRUE,TRUE,TRUE,2026/04/12
 235,Lowest Common Ancestor of a Binary Search Tree,FALSE,,,,
 108,Convert Sorted Array to Binary Search Tree,FALSE,TRUE,FALSE,FALSE,2026/07/01
 701,Insert into a Binary Search Tree,FALSE,,,,
@@ -24,8 +24,8 @@ key,name,Completed,Studied 100% TC,completed in time,completed to 100%,Date Last
 100,Same Tree,FALSE,,,,
 102,Binary Tree Level Order Traversal,FALSE,TRUE,TRUE,FALSE,2026/07/18
 104,Maximum Depth of Binary Tree,FALSE,,,,
-111,Minimum Depth of Binary Tree,FALSE,,,,
-2073,Time Needed to Buy Tickets,FALSE,,,,
+111,Minimum Depth of Binary Tree,FALSE,TRUE,FALSE,FALSE,2026/09/01
+2073,Time Needed to Buy Tickets,FALSE,FALSE,TRUE,FALSE,2026/08/30
 92,Reverse Linked List II,FALSE,,,,
 637,Average of Levels in Binary Tree,FALSE,,,,
 912,Sort an Array,FALSE,,,,
@@ -61,7 +61,7 @@ key,name,Completed,Studied 100% TC,completed in time,completed to 100%,Date Last
 1266,Minimum Time Visiting All Points,FALSE,,,,
 1365,How Many Numbers Are Smaller Than the Current Number,FALSE,,,,
 1,Two Sum,TRUE,TRUE,TRUE,TRUE,2026/04/19
-268,Missing Number,FALSE,,,,
+268,Missing Number,TRUE,TRUE,TRUE,TRUE,2026/08/30
 448,Find All Numbers Disappeared in an Array,FALSE,,,,
 217,Contains Duplicate,FALSE,,,,
 25,Reverse Nodes in k-Group,FALSE,,,,

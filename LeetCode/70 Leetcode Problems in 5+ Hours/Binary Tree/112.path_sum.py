@@ -7,18 +7,17 @@
 class Solution:
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
         
-        def addChildNodes(node, total):
+        # Employ DFS
 
-            if (node == None):
-                return False
+        if (not root): return False
 
-            tot = total - node.val
-            
-            if (tot == 0) and (node.left == None) and (node.right == None):
-                return True
-            elif (tot < 0):
-                return False
-            else:
-                return addChildNodes(node.left, tot) or addChildNodes(node.right, tot)
-        
-        return addChildNodes(root, targetSum)
+        if ((root.val == targetSum) and (not root.left) and (not root.right)): return True
+
+        left, right = False, False
+        if (root.left):
+            left = self.hasPathSum(root.left, targetSum - root.val)
+        if (root.right):
+            right = self.hasPathSum(root.right, targetSum - root.val)
+
+        return left or right
+
