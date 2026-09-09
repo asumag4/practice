@@ -14,6 +14,7 @@
 - 977. Squares of a Sorted Array
 - 15. 3Sum
 - 845. Longest Mountain in Array
+- 912. Sort an Array
 
 **Arrays — Sliding Window**
 - 219. Contains Duplicate II

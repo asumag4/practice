@@ -14,8 +14,8 @@ key,name,Completed,Studied 100% TC,completed in time,completed to 100%,Date Last
 530,Minimum Absolute Difference in BST,FALSE,,,,
 653,Two Sum IV - Input is a BST,FALSE,,,,
 236,Lowest Common Ancestor of a Binary Tree,FALSE,,,,
-543,Diameter of Binary Tree,FALSE,,,,
-112,Path Sum,FALSE,,,,
+543,Diameter of Binary Tree,FALSE,TRUE,FALSE,FALSE,2026/09/07
+112,Path Sum,TRUE,TRUE,TRUE,TRUE,2026/09/01
 235,Lowest Common Ancestor of a Binary Search Tree,FALSE,,,,
 FALSE,FALSE,FALSE,,,,
 701,Insert into a Binary Search Tree,FALSE,,,,
@@ -26,15 +26,15 @@ FALSE,FALSE,FALSE,,,,
 104,Maximum Depth of Binary Tree,FALSE,,,,
 111,Minimum Depth of Binary Tree,FALSE,TRUE,FALSE,FALSE,2026/09/01
 2073,Time Needed to Buy Tickets,FALSE,TRUE,FALSE,FALSE,2026/08/30
-92,Reverse Linked List II,FALSE,,,,
+92,Reverse Linked List II,FALSE,TRUE,FALSE,FALSE,2026/09/08
 637,Average of Levels in Binary Tree,FALSE,,,,
-912,Sort an Array,FALSE,,,,
+912,Sort an Array,TRUE,FALSE,FALSE,FALSE,2026/09/07
 20,Valid Parentheses,FALSE,,,,
 21,Merge Two Sorted Lists,FALSE,,,,
 225,Implement Stack using Queues,FALSE,,,,
 203,Remove Linked List Elements,FALSE,,,,
 206,Reverse Linked List,FALSE,,,,
-150,Evaluate Reverse Polish Notation,FALSE,,,,
+150,Evaluate Reverse Polish Notation,FALSE,TRUE,FALSE,FALSE,2026/09/03
 155,Min Stack,FALSE,,,,
 234,Palindrome Linked List,FALSE,,,,
 46,Permutations,FALSE,,,,
@@ -63,7 +63,7 @@ FALSE,FALSE,FALSE,,,,
 1,Two Sum,FALSE,,,,
 268,Missing Number,FALSE,TRUE,TRUE,FALSE,2026/08/30
 448,Find All Numbers Disappeared in an Array,FALSE,,,,
-217,Contains Duplicate,FALSE,,,,
+217,Contains Duplicate,FALSE,TRUE,FALSE,FALSE,2026/09/08
 25,Reverse Nodes in k-Group,FALSE,,,,
 24,Swap Nodes in Pairs,FALSE,,,,
 515,Find Largest Value in Each Tree Row,FALSE,,,,
