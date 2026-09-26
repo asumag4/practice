@@ -1,5 +1,5 @@
 key,name,Completed,Studied 100% TC,completed in time,completed to 100%,Date Last Visited
-787,Cheapest Flights Within K Stops,FALSE,,,,
+787,Cheapest Flights Within K Stops,FALSE,TRUE,FALSE,FALSE,2026/09/19
 621,Task Scheduler,FALSE,,,,
 207,Course Schedule,FALSE,FALSE,FALSE,FALSE,2026/08/26
 1615,Maximal Network Rank,FALSE,,,,
@@ -17,10 +17,10 @@ key,name,Completed,Studied 100% TC,completed in time,completed to 100%,Date Last
 543,Diameter of Binary Tree,FALSE,TRUE,FALSE,FALSE,2026/09/07
 112,Path Sum,TRUE,TRUE,TRUE,TRUE,2026/09/01
 235,Lowest Common Ancestor of a Binary Search Tree,FALSE,,,,
-FALSE,FALSE,FALSE,,,,
+108,Convert Sorted Array to Binary Search Tree,FALSE,TRUE,FALSE,FALSE,2026/07/01
 701,Insert into a Binary Search Tree,FALSE,,,,
 700,Search in a Binary Search Tree,FALSE,,,,
-226,Invert Binary Tree,FALSE,,,,
+226,Invert Binary Tree,TRUE,TRUE,TRUE,TRUE,2026/09/12
 100,Same Tree,FALSE,,,,
 102,Binary Tree Level Order Traversal,FALSE,,,,
 104,Maximum Depth of Binary Tree,FALSE,,,,
@@ -43,21 +43,21 @@ FALSE,FALSE,FALSE,,,,
 78,Subsets,FALSE,,,,
 77,Combinations,FALSE,,,,
 784,Letter Case Permutation,FALSE,,,,
-303,Range Sum Query - Immutable,FALSE,,,,
+303,Range Sum Query - Immutable,FALSE,TRUE,TRUE,FALSE,2026/09/19
 338,Counting Bits,FALSE,,,,
-53,Maximum Subarray,FALSE,,,,
+53,Maximum Subarray,FALSE,TRUE,FALSE,FALSE,2026/09/12
 70,Climbing Stairs,FALSE,,,,
 322,Coin Change,FALSE,,,,
 209,Minimum Size Subarray Sum,FALSE,,,,
 136,Single Number,FALSE,TRUE,FALSE,FALSE,2026/08/04
-15,3Sum,FALSE,,,,
+15,3Sum,FALSE,TRUE,FALSE,FALSE,2026/09/13
 200,Number of Islands,FALSE,,,,
 219,Contains Duplicate II,FALSE,,,,
 1200,Minimum Absolute Difference,FALSE,,,,
 54,Spiral Matrix,FALSE,,,,
 845,Longest Mountain in Array,FALSE,,,,
-977,Squares of a Sorted Array,FALSE,,,,
-121,Best Time to Buy and Sell Stock,FALSE,,,,
+977,Squares of a Sorted Array,FALSE,TRUE,FALSE,FALSE,2026/09/20
+121,Best Time to Buy and Sell Stock,FALSE,TRUE,FALSE,FALSE,2026/09/12
 1266,Minimum Time Visiting All Points,FALSE,,,,
 1365,How Many Numbers Are Smaller Than the Current Number,FALSE,,,,
 1,Two Sum,FALSE,,,,
@@ -65,6 +65,6 @@ FALSE,FALSE,FALSE,,,,
 448,Find All Numbers Disappeared in an Array,FALSE,,,,
 217,Contains Duplicate,FALSE,TRUE,FALSE,FALSE,2026/09/08
 25,Reverse Nodes in k-Group,FALSE,,,,
-24,Swap Nodes in Pairs,FALSE,,,,
+24,Swap Nodes in Pairs,FALSE,TRUE,FALSE,FALSE,2026/09/13
 515,Find Largest Value in Each Tree Row,FALSE,,,,
 230,Kth Smallest Element in a BST,FALSE,,,,
