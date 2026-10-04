@@ -1,7 +1,7 @@
 key,name,Completed,Studied 100% TC,completed in time,completed to 100%,Date Last Visited
 787,Cheapest Flights Within K Stops,FALSE,TRUE,FALSE,FALSE,2026/09/19
 621,Task Scheduler,FALSE,,,,
-207,Course Schedule,FALSE,FALSE,FALSE,FALSE,2026/08/26
+207,Course Schedule,FALSE,TRUE,FALSE,FALSE,2026/09/27
 1615,Maximal Network Rank,FALSE,,,,
 450,Delete Node in a BST,FALSE,,,,
 133,Clone Graph,FALSE,TRUE,FALSE,FALSE,2026/07/19
@@ -14,7 +14,7 @@ key,name,Completed,Studied 100% TC,completed in time,completed to 100%,Date Last
 530,Minimum Absolute Difference in BST,FALSE,,,,
 653,Two Sum IV - Input is a BST,FALSE,,,,
 236,Lowest Common Ancestor of a Binary Tree,FALSE,,,,
-543,Diameter of Binary Tree,FALSE,TRUE,FALSE,FALSE,2026/09/07
+543,Diameter of Binary Tree,TRUE,TRUE,TRUE,TRUE,2026/08/04
 112,Path Sum,TRUE,TRUE,TRUE,TRUE,2026/09/01
 235,Lowest Common Ancestor of a Binary Search Tree,FALSE,,,,
 108,Convert Sorted Array to Binary Search Tree,FALSE,TRUE,FALSE,FALSE,2026/07/01
@@ -26,7 +26,7 @@ key,name,Completed,Studied 100% TC,completed in time,completed to 100%,Date Last
 104,Maximum Depth of Binary Tree,FALSE,,,,
 111,Minimum Depth of Binary Tree,FALSE,TRUE,FALSE,FALSE,2026/09/01
 2073,Time Needed to Buy Tickets,FALSE,TRUE,FALSE,FALSE,2026/08/30
-92,Reverse Linked List II,FALSE,TRUE,FALSE,FALSE,2026/09/08
+92,Reverse Linked List II,FALSE,TRUE,FALSE,FALSE,2026/09/26
 637,Average of Levels in Binary Tree,FALSE,,,,
 912,Sort an Array,TRUE,FALSE,FALSE,FALSE,2026/09/07
 20,Valid Parentheses,FALSE,,,,
@@ -44,11 +44,11 @@ key,name,Completed,Studied 100% TC,completed in time,completed to 100%,Date Last
 77,Combinations,FALSE,,,,
 784,Letter Case Permutation,FALSE,,,,
 303,Range Sum Query - Immutable,FALSE,TRUE,TRUE,FALSE,2026/09/19
-338,Counting Bits,FALSE,,,,
+338,Counting Bits,FALSE,TRUE,FALSE,FALSE,2026/09/27
 53,Maximum Subarray,FALSE,TRUE,FALSE,FALSE,2026/09/12
-70,Climbing Stairs,FALSE,,,,
+70,Climbing Stairs,TRUE,TRUE,TRUE,TRUE,2026/09/27
 322,Coin Change,FALSE,,,,
-209,Minimum Size Subarray Sum,FALSE,,,,
+209,Minimum Size Subarray Sum,FALSE,TRUE,FALSE,FALSE,2026/09/27
 136,Single Number,FALSE,TRUE,FALSE,FALSE,2026/08/04
 15,3Sum,FALSE,TRUE,FALSE,FALSE,2026/09/13
 200,Number of Islands,FALSE,,,,
@@ -66,5 +66,5 @@ key,name,Completed,Studied 100% TC,completed in time,completed to 100%,Date Last
 217,Contains Duplicate,FALSE,TRUE,FALSE,FALSE,2026/09/08
 25,Reverse Nodes in k-Group,FALSE,,,,
 24,Swap Nodes in Pairs,FALSE,TRUE,FALSE,FALSE,2026/09/13
-515,Find Largest Value in Each Tree Row,FALSE,,,,
+515,Find Largest Value in Each Tree Row,TRUE,TRUE,TRUE,TRUE,2026/09/29
 230,Kth Smallest Element in a BST,FALSE,,,,
