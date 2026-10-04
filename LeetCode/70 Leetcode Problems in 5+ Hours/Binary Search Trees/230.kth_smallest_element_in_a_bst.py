@@ -5,22 +5,37 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
+    def kthSmallest(self, root: TreeNode | None, k: int) -> int:
         
-        # Do inorder traversal
-        self.vals = []
+        # Use the hard limit of 1, if we encounter 1, then return 1
+        res = []
 
-        def inOrderTraverse(node):
+        if ((k == 1) and ((root.left == None) and (root.right == None))): return root.val
 
-            if (not node):
-                return 
+        def _traverse(root: TreeNode) -> int:
+            nonlocal res
+
+            if (not root):
+                return
+
+            if (len(res) == k):
+                return res[-1]
             
-            inOrderTraverse(node.left)
-            self.vals.append(node.val)
-            inOrderTraverse(node.right)
+            # We'll use In-order traversal
 
-            return 
-        
-        inOrderTraverse(root)
-        print(self.vals)
-        return self.vals[k-1]
+            left = _traverse(root.left)
+            res.append(root.val)
+            # print(res, root.val)
+            if (len(res) == k):
+                return res[-1]
+            right = _traverse(root.right)
+
+            return left or right
+
+        ans = _traverse(root)
+
+        if ans: 
+            return ans 
+        else:
+            return 0
+            

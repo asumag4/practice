@@ -9,7 +9,7 @@ key,name,Completed,Studied 100% TC,completed in time,completed to 100%,Date Last
 973,K Closest Points to Origin,FALSE,,,,
 215,Kth Largest Element in an Array,FALSE,TRUE,FALSE,FALSE,2026/07/19
 2374,Node With Highest Edge Score,FALSE,,,,
-230,Kth Smallest Element in a BST,FALSE,,,,
+230,Kth Smallest Element in a BST,TRUE,TRUE,TRUE,TRUE,2026/08/04
 1382,Balance a Binary Search Tree,FALSE,,,,
 530,Minimum Absolute Difference in BST,FALSE,,,,
 653,Two Sum IV - Input is a BST,FALSE,,,,
@@ -51,7 +51,7 @@ key,name,Completed,Studied 100% TC,completed in time,completed to 100%,Date Last
 209,Minimum Size Subarray Sum,FALSE,TRUE,FALSE,FALSE,2026/09/27
 136,Single Number,FALSE,TRUE,FALSE,FALSE,2026/08/04
 15,3Sum,FALSE,TRUE,FALSE,FALSE,2026/09/13
-200,Number of Islands,FALSE,,,,
+200,Number of Islands,FALSE,TRUE,FALSE,FALSE,2026/10/04
 219,Contains Duplicate II,FALSE,,,,
 1200,Minimum Absolute Difference,FALSE,,,,
 54,Spiral Matrix,FALSE,,,,
