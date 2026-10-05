@@ -4,34 +4,18 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-from collections import deque
-
 class Solution:
-    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+    def isSameTree(self, p: TreeNode | None, q: TreeNode | None) -> bool:
         
-        p_deque = deque([p])
-        q_deque = deque([q])
+        if ((not p) and (not q)):
+            return True
+        elif ((not p) or (not q)):
+            return False
 
-        while p_deque and q_deque:
+        left = self.isSameTree(p.left, q.left)
+        right = self.isSameTree(p.right, q.right)
 
-            p_node = p_deque.popleft()
-            q_node = q_deque.popleft()
+        if (not (p.val == q.val)):
+            return False
 
-            if (p_node == None) and (q_node == None):
-                continue
-            elif p_node == None: 
-                return False
-            elif q_node == None:
-                return False
-
-            if p_node.val != q_node.val:
-                return False
-
-            p_deque.append(p_node.left)
-            q_deque.append(q_node.left)
-
-            p_deque.append(p_node.right)
-            q_deque.append(q_node.right)
-
-        return True 
-
+        return left and right

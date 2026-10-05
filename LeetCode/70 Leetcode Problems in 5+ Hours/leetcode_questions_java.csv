@@ -11,7 +11,7 @@ key,name,Completed,Studied 100% TC,completed in time,completed to 100%,Date Last
 2374,Node With Highest Edge Score,FALSE,,,,
 230,Kth Smallest Element in a BST,TRUE,TRUE,TRUE,TRUE,2026/08/04
 1382,Balance a Binary Search Tree,FALSE,,,,
-530,Minimum Absolute Difference in BST,FALSE,,,,
+530,Minimum Absolute Difference in BST,FALSE,TRUE,TRUE,FALSE,2026/08/04
 653,Two Sum IV - Input is a BST,FALSE,,,,
 236,Lowest Common Ancestor of a Binary Tree,FALSE,,,,
 543,Diameter of Binary Tree,TRUE,TRUE,TRUE,TRUE,2026/08/04
@@ -47,7 +47,7 @@ key,name,Completed,Studied 100% TC,completed in time,completed to 100%,Date Last
 338,Counting Bits,FALSE,TRUE,FALSE,FALSE,2026/09/27
 53,Maximum Subarray,FALSE,TRUE,FALSE,FALSE,2026/09/12
 70,Climbing Stairs,TRUE,TRUE,TRUE,TRUE,2026/09/27
-322,Coin Change,FALSE,,,,
+322,Coin Change,FALSE,TRUE,FALSE,FALSE,2026/09/20
 209,Minimum Size Subarray Sum,FALSE,TRUE,FALSE,FALSE,2026/09/27
 136,Single Number,FALSE,TRUE,FALSE,FALSE,2026/08/04
 15,3Sum,FALSE,TRUE,FALSE,FALSE,2026/09/13
