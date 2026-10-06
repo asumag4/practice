@@ -30,7 +30,7 @@ key,name,Completed,Studied 100% TC,completed in time,completed to 100%,Date Last
 637,Average of Levels in Binary Tree,FALSE,,,,
 912,Sort an Array,TRUE,FALSE,FALSE,FALSE,2026/09/07
 20,Valid Parentheses,FALSE,,,,
-21,Merge Two Sorted Lists,FALSE,,,,
+21,Merge Two Sorted Lists,TRUE,TRUE,TRUE,TRUE,2026/08/05
 225,Implement Stack using Queues,FALSE,,,,
 203,Remove Linked List Elements,FALSE,,,,
 206,Reverse Linked List,FALSE,,,,
@@ -63,8 +63,8 @@ key,name,Completed,Studied 100% TC,completed in time,completed to 100%,Date Last
 1,Two Sum,FALSE,,,,
 268,Missing Number,FALSE,TRUE,TRUE,FALSE,2026/08/30
 448,Find All Numbers Disappeared in an Array,FALSE,,,,
-217,Contains Duplicate,FALSE,TRUE,FALSE,FALSE,2026/09/08
-25,Reverse Nodes in k-Group,FALSE,,,,
+217,Contains Duplicate,FALSE,TRUE,FALSE,FALSE,2026/10/05
+25,Reverse Nodes in k-Group,TRUE,TRUE,TRUE,TRUE,2026/10/05
 24,Swap Nodes in Pairs,FALSE,TRUE,FALSE,FALSE,2026/09/13
 515,Find Largest Value in Each Tree Row,TRUE,TRUE,TRUE,TRUE,2026/09/29
 230,Kth Smallest Element in a BST,FALSE,,,,
